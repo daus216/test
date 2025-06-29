@@ -5,6 +5,8 @@ jobs:
     name: checkout test
     runs-on: ubuntu-latest
     steps:
-      - run: | 
+      - uses: actions/checkout@v4
+      - name: directry check
+        run: | 
           echo $PWD
           ls -al
