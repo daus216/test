@@ -1,0 +1,10 @@
+name: Generate Functions
+on: workflow_dispatch
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep '_FUNC'
+        env:
+            FORTMAT_FUNC: ${{ format('{0}, {1}.', 'Hi', 'world') }}
+            JOIN_FUNC: ${{ join(github.event.*.html_url, ', ') }}
