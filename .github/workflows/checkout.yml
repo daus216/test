@@ -5,4 +5,6 @@ jobs:
     name: checkout test
     runs-on: ubuntu-latest
     steps:
-      - run: echo $PWD
+      - run: |
+        echo $PWD
+        ls -al
