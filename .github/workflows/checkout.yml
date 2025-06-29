@@ -1,0 +1,8 @@
+name: Checkout Test
+on: workflow_dispatch
+jobs:
+  checkout:
+    name: checkout test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $PWD
