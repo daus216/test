@@ -1,0 +1,10 @@
+name: Code Test
+on: workflow_dispatch
+jobs:
+  test:
+    name: code test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: code check
+        run: python test_main.py
